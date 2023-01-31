@@ -147,6 +147,9 @@ footer {
   }
   .email {
     margin-left: -2rem;
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: auto;
   }
   .arrow:hover {
     background-color: hsl(0deg, 50%, 77%);
