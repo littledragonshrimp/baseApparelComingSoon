@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Inter:wght@300;400;700;800&family=Josefin+Sans:wght@300;400;600&family=Karla:wght@400;700&family=Kumbh+Sans:wght@400;700&family=League+Spartan:wght@400;500;700&family=Lexend+Deca&family=Montserrat:ital,wght@0,500;0,700;1,500;1,700&family=Outfit:wght@300;400;600&family=Poppins:wght@400;500;600;700&family=Roboto:wght@700&display=swap');
+// font-family: "Josefin Sans", sans-serif;
+// font weights = 300, 400, 600
+// standard font size = 16px
+
+//Colors
+$pink: hsl(0, 36%, 70%);
+$peach: hsl(0, 93%, 68%);
+$grey: hsl(0, 6%, 24%);
+
+// ### Gradients
+// - Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+// - Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.logo{
+    margin: 1.5rem;
+}
+
+//this logo is only for Desktop mode
+.desktop-logo{
+    display: none;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.background-holder{
+    display: none;
+}
+
+.title{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    font-size: 1.8rem;
+    h1{color: $grey;}
+    margin: 2rem;
+    font-weight: 300;
+    .we{
+        color: $pink;
+    }
+}
+
+.hero, .cover-photo{
+    width: 100%;
+}
+
+.para{
+    text-align: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    line-height: 1.7rem;
+    color: $pink;
+}
+.input-section{
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 15%;
+    margin-right: 5%;
+    margin-top: 2rem;
+}
+
+//email input section
+.email{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: $peach;
+    border-width: 1px;
+    border-radius: 2rem;
+    height: 3rem;
+}
+
+.email::placeholder{
+    padding-left: 2rem;
+    color: $pink; 
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.input-section button{
+    position: relative;
+    margin-left: rem;
+    background-color: red;
+}
+
+.arrow:hover{
+    background-color: 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+    transition: .4s;
+}
+//end email section
+///////////////////
+
+///Footer is only for attribution
+footer{
+    margin-top: 3rem;
+}
+////////
+
+///BEGIN Desktop mode
+@media screen and (min-width: 900px) {
+    body{
+        background-image: url("images/bg-pattern-desktop.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    main{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+///Desktop logo appears
+    .desktop-logo{
+        background-image: url("images/logo.svg");
+        display: flex;
+        margin: 2rem;
+    }
+///mobile image disappears
+    .hero{
+        display: none;
+    }
+    
+
+    .background-holder{
+        display: block;
+        width: 80vh;
+        position: relative;
+        flex: 1;
+        object-fit: fill;
+    }
+    .main-section{
+        flex: 1;
+        margin-left: 10%;
+        .title, .para{
+        text-align: left;
+        max-width: 30rem;
+        }
+        .title{
+            margin-top: 10rem;
+            line-height: 4.2rem;
+        }
+        .para{
+            line-height: 1.8rem;
+        }
+      
+    }
+    .email{
+       margin-left: -2rem;
+    }
+
+    .arrow:hover{
+
+        background-color: hsl(0, 50%, 77%);
+        box-shadow: 6px 6px 5px $grey;
+    }
+
+    footer{
+        margin-top: 10rem;
+        display: none;
+    }
+}

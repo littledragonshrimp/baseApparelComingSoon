@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Inter:wght@300;400;700;800&family=Josefin+Sans:wght@300;400;600&family=Karla:wght@400;700&family=Kumbh+Sans:wght@400;700&family=League+Spartan:wght@400;500;700&family=Lexend+Deca&family=Montserrat:ital,wght@0,500;0,700;1,500;1,700&family=Outfit:wght@300;400;600&family=Poppins:wght@400;500;600;700&family=Roboto:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.logo {
+  margin: 1.5rem;
+}
+
+.desktop-logo {
+  display: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.background-holder {
+  display: none;
+}
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: 1.8rem;
+  margin: 2rem;
+  font-weight: 300;
+}
+.title h1 {
+  color: hsl(0deg, 6%, 24%);
+}
+.title .we {
+  color: hsl(0deg, 36%, 70%);
+}
+
+.hero, .cover-photo {
+  width: 100%;
+}
+
+.para {
+  text-align: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  line-height: 1.7rem;
+  color: hsl(0deg, 36%, 70%);
+}
+
+.input-section {
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 15%;
+  margin-right: 5%;
+  margin-top: 2rem;
+}
+
+.email {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-color: hsl(0deg, 93%, 68%);
+  border-width: 1px;
+  border-radius: 2rem;
+  height: 3rem;
+}
+
+.email::-moz-placeholder {
+  padding-left: 2rem;
+  color: hsl(0deg, 36%, 70%);
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.email:-ms-input-placeholder {
+  padding-left: 2rem;
+  color: hsl(0deg, 36%, 70%);
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.email::placeholder {
+  padding-left: 2rem;
+  color: hsl(0deg, 36%, 70%);
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.input-section button {
+  position: relative;
+  margin-left: rem;
+  background-color: red;
+}
+
+.arrow:hover {
+  background-color: 135deg, from hsl(0deg, 0%, 100%), to hsl(0deg, 100%, 98%);
+  transition: 0.4s;
+}
+
+footer {
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    background-image: url("images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  main {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .desktop-logo {
+    background-image: url("images/logo.svg");
+    display: flex;
+    margin: 2rem;
+  }
+  .hero {
+    display: none;
+  }
+  .background-holder {
+    display: block;
+    width: 80vh;
+    position: relative;
+    flex: 1;
+    -o-object-fit: fill;
+       object-fit: fill;
+  }
+  .main-section {
+    flex: 1;
+    margin-left: 10%;
+  }
+  .main-section .title, .main-section .para {
+    text-align: left;
+    max-width: 30rem;
+  }
+  .main-section .title {
+    margin-top: 10rem;
+    line-height: 4.2rem;
+  }
+  .main-section .para {
+    line-height: 1.8rem;
+  }
+  .email {
+    margin-left: -2rem;
+  }
+  .arrow:hover {
+    background-color: hsl(0deg, 50%, 77%);
+    box-shadow: 6px 6px 5px hsl(0deg, 6%, 24%);
+  }
+  footer {
+    margin-top: 10rem;
+    display: none;
+  }
+}/*# sourceMappingURL=styles.css.map */
