@@ -57,6 +57,18 @@ main {
   margin-right: 5%;
   margin-top: 2rem;
 }
+.input-section ::-moz-placeholder {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.input-section :-ms-input-placeholder {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.input-section ::placeholder {
+  margin-top: auto;
+  margin-bottom: auto;
+}
 
 .email {
   width: 80%;
@@ -66,32 +78,45 @@ main {
   border-width: 1px;
   border-radius: 2rem;
   height: 3rem;
+  padding-left: 2rem;
+  padding-top: 0.2rem;
+}
+.email.email-error {
+  border-color: red;
+  border-width: 2px;
+}
+
+#email-error-message {
+  display: none;
+  margin: 1rem 2rem 2rem 10%;
+  color: red;
+}
+#email-error-message.show-error {
+  display: inline-block;
+  margin-left: 3rem;
 }
 
 .email::-moz-placeholder {
-  padding-left: 2rem;
   color: hsl(0deg, 36%, 70%);
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 300;
 }
 
 .email:-ms-input-placeholder {
-  padding-left: 2rem;
   color: hsl(0deg, 36%, 70%);
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 300;
 }
 
 .email::placeholder {
-  padding-left: 2rem;
   color: hsl(0deg, 36%, 70%);
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 300;
 }
 
-.input-section button {
+.input-section a {
   position: relative;
-  margin-left: rem;
+  margin-left: 2rem;
   background-color: red;
 }
 
@@ -144,14 +169,25 @@ footer {
   }
   .main-section .para {
     line-height: 1.8rem;
+    margin-bottom: 1rem;
   }
-  .email {
-    margin-left: -2rem;
+  .input-section {
+    position: relative;
+    margin-left: 2rem;
+    margin-top: 2rem;
     text-align: left;
     margin-top: auto;
     margin-bottom: auto;
   }
-  .arrow:hover {
+  .arrow-button {
+    position: absolute;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 2rem;
+  }
+  .arrow-button:hover {
     background-color: hsl(0deg, 50%, 77%);
     box-shadow: 6px 6px 5px hsl(0deg, 6%, 24%);
   }

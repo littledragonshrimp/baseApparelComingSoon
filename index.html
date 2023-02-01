@@ -19,33 +19,41 @@
 
 <main>
   <div class="hero">
-    <div class="logo"><img src="images/logo.svg" alt="logo"></div>
+    <div class="logo"><img src="images/logo.svg" alt="Base Apparel Logo"></div>
     <img class="cover-photo" src="images/hero-mobile.jpg" alt="woman model">
   </div>
+
   <div class="non-hero">
-    <div class="background-holder">
+    <div class="background-holder"> <!--Holds background for Desktop mode-->
       <img src="images/hero-desktop.jpg" alt="" srcset="">
     </div>
   </div>
+
     <div class="main-section">
       <img class="desktop-logo" src="images/logo.svg">
-  <div class="title">
-    <h1><span class="we">We're</span> coming soon</h1>
-  </div>
-  <div class="para">
-    <p>Hello fellow shoppers! We're currently building our new fashion store. 
-    Add your email below to stay up-to-date with announcements and our launch deals.
-    </p>
-  </div>
-  <form class="input-section">
-    <input type="email" class="email" id="email" placeholder="Email Address"><button class="arrow-button"><img src="images/icon-arrow.svg" class="arrow" alt="arrow icon" srcset=""></button>
-  </form>
-  </div>
+        <div class="title">
+          <h1><span class="we">We're</span> coming soon</h1>
+        </div>
+
+      <div class="para">
+        <p>Hello fellow shoppers! We're currently building our new fashion store. 
+        Add your email below to stay up-to-date with announcements and our launch deals.
+        </p>
+      </div>
+<!--email input section-->
+      <form class="input-section">
+        <input type="email" class="email" id="email-field" placeholder="Email Address">
+        <a class="arrow-button" id="email-button"><img src="images/icon-arrow.svg" class="arrow" alt="arrow icon" srcset=""></a>
+      </form>
+<!--Only shows up after clicking arrow-button (see above)-->
+      <p id="email-error-message">Please enter a valid email address</p>
+    </div>
 </main>
+
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://github.com/littledragonshrimp/baseApparelComingSoon">littleDragonShrimp</a>.
     </p>
   </footer>
 

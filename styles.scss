@@ -67,6 +67,11 @@ main{
     margin-left: 15%;
     margin-right: 5%;
     margin-top: 2rem;
+
+    ::placeholder{
+        margin-top: auto;
+        margin-bottom: auto;
+    }
 }
 
 //email input section
@@ -78,18 +83,34 @@ main{
     border-width: 1px;
     border-radius: 2rem;
     height: 3rem;
-}
-
-.email::placeholder{
     padding-left: 2rem;
+    padding-top: .2rem;
+  
+
+    &.email-error{
+    border-color: red;
+    border-width: 2px;
+    }
+}
+#email-error-message{
+    display: none;
+    margin: 1rem 2rem 2rem 10%;
+    color: red; 
+    &.show-error{
+        display: inline-block;
+        margin-left: 3rem;
+    }
+}
+//problem here
+.email::placeholder{
     color: $pink; 
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 300;
 }
 
-.input-section button{
+.input-section a {
     position: relative;
-    margin-left: rem;
+    margin-left: 2rem;
     background-color: red;
 }
 
@@ -150,17 +171,28 @@ footer{
         }
         .para{
             line-height: 1.8rem;
+            margin-bottom: 1rem;
         }
       
     }
-    .email{
-       margin-left: -2rem;
+    .input-section{
+        position:relative;
+        margin-left: 2rem;
+        margin-top: 2rem;
        text-align: left;
        margin-top: auto;
        margin-bottom: auto;
     }
 
-    .arrow:hover{
+    .arrow-button {
+        position: absolute;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        border-radius: 2rem;
+    }
+    .arrow-button:hover{
 
         background-color: hsl(0, 50%, 77%);
         box-shadow: 6px 6px 5px $grey;
