@@ -93,7 +93,7 @@ main {
 }
 #email-error-message.show-error {
   display: inline-block;
-  margin-left: 3rem;
+  margin-left: 17%;
 }
 
 .email::-moz-placeholder {
