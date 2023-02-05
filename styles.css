@@ -1,12 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Inter:wght@300;400;700;800&family=Josefin+Sans:wght@300;400;600&family=Karla:wght@400;700&family=Kumbh+Sans:wght@400;700&family=League+Spartan:wght@400;500;700&family=Lexend+Deca&family=Montserrat:ital,wght@0,500;0,700;1,500;1,700&family=Outfit:wght@300;400;600&family=Poppins:wght@400;500;600;700&family=Roboto:wght@700&display=swap");
-* {
+:root {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+body, * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Josefin Sans", sans-serif;
 }
 
 .logo {
   margin: 1.5rem;
+}
+
+.hidden {
+  display: none;
 }
 
 .desktop-logo {
@@ -87,13 +97,9 @@ main {
 }
 
 #email-error-message {
-  display: none;
-  margin: 1rem 2rem 2rem 10%;
   color: red;
-}
-#email-error-message.show-error {
-  display: inline-block;
-  margin-left: 17%;
+  margin-left: auto;
+  margin-top: 1rem;
 }
 
 .email::-moz-placeholder {
@@ -114,15 +120,25 @@ main {
   font-weight: 300;
 }
 
-.input-section a {
-  position: relative;
-  margin-left: 2rem;
-  background-color: red;
+.send-button {
+  background: linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%));
+  border-radius: 2rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.9rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  margin-left: -5rem;
+  border-style: none;
 }
 
-.arrow:hover {
-  background-color: 135deg, from hsl(0deg, 0%, 100%), to hsl(0deg, 100%, 98%);
-  transition: 0.4s;
+.send-button:hover {
+  background: linear-gradient(135deg, hsl(0deg, 80%, 86%), hsl(0deg, 80%, 86%));
+  transform: scale(1.1);
+  box-shadow: 5px 5px 10px 0px hsl(0deg, 93%, 68%);
+}
+
+.error-icon {
+  margin-right: 10rem;
 }
 
 footer {
@@ -178,18 +194,6 @@ footer {
     text-align: left;
     margin-top: auto;
     margin-bottom: auto;
-  }
-  .arrow-button {
-    position: absolute;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    border-radius: 2rem;
-  }
-  .arrow-button:hover {
-    background-color: hsl(0deg, 50%, 77%);
-    box-shadow: 6px 6px 5px hsl(0deg, 6%, 24%);
   }
   footer {
     margin-top: 10rem;

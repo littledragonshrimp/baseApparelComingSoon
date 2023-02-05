@@ -7,19 +7,35 @@
 $pink: hsl(0, 36%, 70%);
 $peach: hsl(0, 93%, 68%);
 $grey: hsl(0, 6%, 24%);
+//variables
+%gradientOne {
+    background: rgb(255, 230, 230);
+    background: linear-gradient(90deg, rgba(255, 230, 230, 1) 0%, rgba(255, 171, 171, 1) 100%);
+}
+%gradientTwo {
+    background: rgb(248, 191, 191);
+    background: linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%);
+}
 
-// ### Gradients
-// - Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
-// - Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
+:root{
+    font-family: "Josefin Sans", sans-serif;
+    //font-weight: 300, 400, 600;
+    font-size: 16px;
+    font-weight: 400;
+}
 
-*{
+body, *{
+    box-sizing:border-box;
     margin: 0;
     padding: 0;
-    font-family: "Josefin Sans", sans-serif;
 }
 
 .logo{
     margin: 1.5rem;
+}
+
+.hidden{
+    display: none;
 }
 
 //this logo is only for Desktop mode
@@ -86,21 +102,23 @@ main{
     padding-left: 2rem;
     padding-top: .2rem;
   
-
+////////////////
+/// ///////////
+/// msg issue onclick
+/// /////////////
+/// ////////////
     &.email-error{
     border-color: red;
     border-width: 2px;
     }
 }
 #email-error-message{
-    display: none;
-    margin: 1rem 2rem 2rem 10%;
-    color: red; 
-    &.show-error{
-        display: inline-block;
-        margin-left: 17%;
-    }
+    color: red;
+    margin-left: auto;
+    margin-top: 1rem;
 }
+/////////////
+
 //problem here
 .email::placeholder{
     color: $pink; 
@@ -108,15 +126,44 @@ main{
     font-weight: 300;
 }
 
-.input-section a {
-    position: relative;
-    margin-left: 2rem;
-    background-color: red;
+
+
+.send-button{
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border-radius: 2rem;
+    padding-top: .7rem;
+    padding-bottom: .9rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-left: -5rem;
+    border-style: none;
+    
 }
 
-.arrow:hover{
-    background-color: 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
-    transition: .4s;
+.send-button:hover{
+
+    
+    // background-color: hsl(0, 50%, 77%);
+    // box-shadow: 6px 6px 5px $grey;
+    // transition: .4s;
+    // border-radius: 2rem;
+    // padding-top: 1rem;
+    // padding-bottom: 1rem;
+    // padding-right: 2rem;
+    // padding-left: 2rem;
+
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 80%, 86%));
+    transform: scale(1.1);
+    box-shadow: 5px 5px 10px 0px $peach;
+
+}
+  
+
+
+
+
+.error-icon{
+    margin-right: 10rem;
 }
 //end email section
 ///////////////////
@@ -133,6 +180,8 @@ footer{
         background-image: url("images/bg-pattern-desktop.svg");
         background-repeat: no-repeat;
         background-size: cover;
+
+        
     }
 
     main{
@@ -184,19 +233,6 @@ footer{
        margin-bottom: auto;
     }
 
-    .arrow-button {
-        position: absolute;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        padding-left: 2rem;
-        padding-right: 2rem;
-        border-radius: 2rem;
-    }
-    .arrow-button:hover{
-
-        background-color: hsl(0, 50%, 77%);
-        box-shadow: 6px 6px 5px $grey;
-    }
 
     footer{
         margin-top: 10rem;

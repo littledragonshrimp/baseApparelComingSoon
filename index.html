@@ -32,7 +32,9 @@
     <div class="main-section">
       <img class="desktop-logo" src="images/logo.svg">
         <div class="title">
-          <h1><span class="we">We're</span> coming soon</h1>
+          <h1>
+            <span class="we">We're</span> 
+            coming soon</h1>
         </div>
 
       <div class="para">
@@ -41,12 +43,17 @@
         </p>
       </div>
 <!--email input section-->
-      <form class="input-section">
-        <input type="email" class="email" id="email-field" placeholder="Email Address" alt="insert email address here">
-        <a class="arrow-button" id="email-button"><img src="images/icon-arrow.svg" class="arrow" alt="click after typing email" srcset=""></a>
-      </form>
+      <form class="input-section" id="form-email">
+        <input type="email" name="email" class="email" id="email-field" placeholder="Email Address" alt="insert email address here">
+        <button id="send" class="send-button">
+          <img src="images/icon-arrow.svg" alt="submit button">
+        </button>
+
 <!--Only shows up after clicking arrow-button (see above)-->
-      <p id="email-error-message">Please enter a valid email address</p>
+        <img class="hidden" id="error-icon"src="images/icon-error.svg" alt="error" required>
+        <span class="hidden" id="email-error-message">Please provide a valid email</span>
+      </form> 
+      
     </div>
 </main>
 
