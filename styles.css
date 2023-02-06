@@ -98,7 +98,7 @@ main {
 
 #email-error-message {
   color: red;
-  margin-left: auto;
+  margin-left: 1rem;
   margin-top: 1rem;
 }
 
@@ -137,15 +137,15 @@ main {
   box-shadow: 5px 5px 10px 0px hsl(0deg, 93%, 68%);
 }
 
-.error-icon {
-  margin-right: 10rem;
+#error-icon {
+  margin-left: -8rem;
 }
 
 footer {
   margin-top: 3rem;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1200px) {
   body {
     background-image: url("images/bg-pattern-desktop.svg");
     background-repeat: no-repeat;
@@ -194,6 +194,9 @@ footer {
     text-align: left;
     margin-top: auto;
     margin-bottom: auto;
+  }
+  #error-icon {
+    margin-left: -30%;
   }
   footer {
     margin-top: 10rem;

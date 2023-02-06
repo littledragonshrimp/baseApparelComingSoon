@@ -33,7 +33,7 @@
 
 const button = document.querySelector("button#send");
 const errorIcon = document.querySelector("#form-email>img");
-const errorMsg = document.querySelector("#form-email>span");
+const errorMsg = document.querySelector("#form-email>div");
 const email = document.querySelector("input#email-field");
 
 function Error(){
